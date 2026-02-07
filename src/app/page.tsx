@@ -2,7 +2,7 @@
 // Components //
 import { DocTabs } from "./components";
 // Data //
-import { ButtonDoc } from "./data";
+import { ButtonDoc, CardDoc } from "./data";
 
 export default function HomePage() {
     return (
@@ -52,6 +52,39 @@ export default function HomePage() {
                             content: (
                                 <pre className="bg-black/90 text-white p-4 rounded-lg text-sm overflow-x-auto">
                                     {ButtonDoc.code}
+                                </pre>
+                            ),
+                        },
+                    ]}
+                />
+            </section>
+
+            <hr />
+
+            <section className="space-y-6">
+                <h2 className="text-2xl font-semibold">{CardDoc.name}</h2>
+                <p className="text-[rgb(var(--muted))]">
+                    {CardDoc.description}
+                </p>
+
+                <DocTabs
+                    tabs={[
+                        {
+                            id: "props",
+                            label: "Props",
+                            content: CardDoc.props,
+                        },
+                        {
+                            id: "examples",
+                            label: "Ejemplos",
+                            content: CardDoc.examples,
+                        },
+                        {
+                            id: "code",
+                            label: "Código",
+                            content: (
+                                <pre className="bg-black/90 text-white p-4 rounded-lg text-sm overflow-x-auto">
+                                    {CardDoc.code}
                                 </pre>
                             ),
                         },
