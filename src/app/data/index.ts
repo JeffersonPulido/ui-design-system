@@ -3,6 +3,7 @@ import { IComponent } from "../interfaces";
 // Root //
 import { ButtonDoc } from "./button.doc";
 import { CardDoc } from "./card.doc";
+import { InputDoc } from "./input.doc";
 
 export const COMPONENT_DOCS: IComponent[] = [
     {
@@ -12,5 +13,9 @@ export const COMPONENT_DOCS: IComponent[] = [
     {
         id: "card",
         ...CardDoc,
+    },
+    {
+        id: "input",
+        ...InputDoc,
     },
 ];

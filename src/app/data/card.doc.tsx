@@ -1,6 +1,5 @@
 // Components Library Design System //
 import { Card } from "@/ui/components/Card";
-
 // Components Root //
 import { PropsTable } from "../components/PropsTable";
 import { ExampleBlock } from "../components/ExampleBlock";
