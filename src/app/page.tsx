@@ -1,14 +1,20 @@
 "use client";
 // Components //
 import { ComponentDocSection, Sidebar } from "./components";
+// Custom Hooks //
+import { useActiveSection } from "./hooks";
 // Data //
 import { COMPONENT_DOCS } from "./data";
 
 export default function HomePage() {
+    const activeId = useActiveSection(COMPONENT_DOCS.map((c) => c.id));
+
     return (
         <div className="flex">
-            <aside className="hidden lg:block w-72 border-r border-[rgb(var(--border))] min-h-screen sticky top-0">
-                <Sidebar components={COMPONENT_DOCS} />
+            <aside className="hidden lg:block w-auto border-r border-[rgb(var(--border))] ">
+                <div className="sticky top-0 h-screen">
+                    <Sidebar components={COMPONENT_DOCS} activeId={activeId} />
+                </div>
             </aside>
 
             <main className="flex-1">
