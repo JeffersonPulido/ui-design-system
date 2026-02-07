@@ -55,12 +55,17 @@ export const ButtonDoc = {
                     type: "function",
                     description: "Accion a ejecutar",
                 },
+                {
+                    name: "color",
+                    type: "string",
+                    description: "Codigo HEX",
+                },
             ]}
         />
     ),
 
     examples: (
-        <div className="space-y-6">
+        <div className="space-y-8">
             <ExampleBlock title="Variantes">
                 <Button label="Primary" />
                 <Button label="Secondary" variant="secondary" />
@@ -68,26 +73,56 @@ export const ButtonDoc = {
             </ExampleBlock>
 
             <ExampleBlock title="Estados">
+                <Button label="Normal" />
                 <Button label="Loading" loading />
                 <Button label="Disabled" disabled />
             </ExampleBlock>
 
-            <ExampleBlock title="Con icono">
+            <ExampleBlock title="Con iconos">
                 <Button label="Guardar" icon={<Save />} />
                 <Button
                     label="Continuar"
                     icon={<ArrowForward />}
                     iconPosition="right"
                 />
+                <Button label="Guardar" variant="secondary" icon={<Save />} />
+            </ExampleBlock>
+
+            <ExampleBlock title="Colores personalizados">
+                <Button label="Success" color="#16a34a" />
+                <Button label="Warning" color="#f59e0b" />
+                <Button label="Danger" color="#dc2626" />
+                <Button
+                    label="Custom"
+                    color="#e303fc"
+                />
+            </ExampleBlock>
+
+            <ExampleBlock title="Interacción (onClick)">
+                <Button
+                    label="Guardar cambios"
+                    icon={<Save />}
+                    onClick={() => alert("Cambios guardados correctamente")}
+                />
+
+                <Button
+                    label="Continuar"
+                    variant="secondary"
+                    icon={<ArrowForward />}
+                    iconPosition="right"
+                    onClick={() => alert("Continuando al siguiente paso")}
+                />
             </ExampleBlock>
         </div>
     ),
 
     code: `<Button
-  label="Guardar"
-  variant="primary"
-  icon={<SaveIcon />}
-  onClick={handleSave}
+    label="Continuar"
+    variant="secondary"
+    icon={<ArrowForward />}
+    iconPosition="right"
+    onClick={() => alert("Continuando al siguiente paso")}
+    color="#e303fc"
 />
 `,
 };
