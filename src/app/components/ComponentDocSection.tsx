@@ -12,9 +12,7 @@ export const ComponentDocSection = ({ doc }: Props) => {
         <section id={doc.id} className="scroll-mt-24 space-y-8">
             <h2 className="text-2xl font-semibold">{doc.name}</h2>
 
-            <p className="text-[rgb(var(--muted))]">
-                {doc.description}
-            </p>
+            <p className="text-[rgb(var(--muted))]">{doc.description}</p>
 
             <DocTabs
                 tabs={[
@@ -32,8 +30,10 @@ export const ComponentDocSection = ({ doc }: Props) => {
                         id: "code",
                         label: "Código",
                         content: (
-                            <pre className="bg-black/90 text-white p-4 rounded-lg text-sm overflow-x-auto">
-                                {doc.code}
+                            <pre className="relative md:max-w-full max-w-sm overflow-x-auto rounded-lg bg-black/90 p-4 text-sm text-white leading-relaxed sm:text-sm scrollbar-thin">
+                                <code className="block min-w-full whitespace-pre">
+                                    {doc.code}
+                                </code>
                             </pre>
                         ),
                     },
