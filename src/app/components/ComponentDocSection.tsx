@@ -9,7 +9,7 @@ interface Props {
 
 export const ComponentDocSection = ({ doc }: Props) => {
     return (
-        <section className="space-y-6">
+        <section id={doc.id} className="scroll-mt-24 space-y-8">
             <h2 className="text-2xl font-semibold">{doc.name}</h2>
 
             <p className="text-[rgb(var(--muted))]">

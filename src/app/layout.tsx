@@ -1,6 +1,10 @@
+// Libraries //
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+// CSS //
 import "./globals.css";
+// Provider MUI //
+import { MuiProvider } from "./providers/MuiProvider";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -27,28 +31,31 @@ export default function RootLayout({
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
-                <div className="min-h-screen flex flex-col">
-                    <header className="border-b border-[rgb(var(--border))]">
-                        <div className="max-w-6xl mx-auto px-6 py-4">
-                            <h1 className="text-lg font-semibold">
-                                UI Design System - Jefferson S. Pulido M.
-                            </h1>
-                        </div>
-                    </header>
+                <MuiProvider>
+                    <div className="min-h-screen flex flex-col">
+                        <header className="border-b border-[rgb(var(--border))]">
+                            <div className="max-w-6xl mx-auto px-6 py-4">
+                                <h1 className="text-lg font-semibold">
+                                    UI Design System - Jefferson S. Pulido M.
+                                </h1>
+                            </div>
+                        </header>
 
-                    <main className="flex-1">{children}</main>
+                        <main className="flex-1">{children}</main>
 
-                    <footer className="border-t border-[rgb(var(--border))]">
-                        <div className="max-w-6xl mx-auto px-6 py-4 text-sm text-[rgb(var(--muted))]">
-                            <a
-                                href="https://jeffersonpulido.netlify.app/"
-                                target="_blank"
-                            >
-                                Jefferson S. Pulido M. © {new Date().getFullYear()} Design System
-                            </a>
-                        </div>
-                    </footer>
-                </div>
+                        <footer className="border-t border-[rgb(var(--border))]">
+                            <div className="max-w-6xl mx-auto px-6 py-4 text-sm text-[rgb(var(--muted))]">
+                                <a
+                                    href="https://jeffersonpulido.netlify.app/"
+                                    target="_blank"
+                                >
+                                    Jefferson S. Pulido M. ©{" "}
+                                    {new Date().getFullYear()} Design System
+                                </a>
+                            </div>
+                        </footer>
+                    </div>
+                </MuiProvider>
             </body>
         </html>
     );
