@@ -57,8 +57,8 @@ export const ButtonDoc = {
                 },
                 {
                     name: "color",
-                    type: "string",
-                    description: "Codigo HEX",
+                    type: "string (HEX)",
+                    description: "Codigo fondo",
                 },
             ]}
         />
