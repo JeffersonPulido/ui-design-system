@@ -9,7 +9,7 @@ import { ExampleBlock } from "../components/ExampleBlock";
 export const ButtonDoc = {
     name: "Button",
     description:
-        "El componente Button se utiliza para disparar acciones del usuario.",
+        "El componente Button se utiliza para realizar acciones del usuario.",
 
     props: (
         <PropsTable
@@ -18,6 +18,7 @@ export const ButtonDoc = {
                     name: "label",
                     type: "string",
                     description: "Texto del botón",
+                    required: true,
                 },
                 {
                     name: "variant",
@@ -43,6 +44,16 @@ export const ButtonDoc = {
                     name: "disabled",
                     type: "boolean",
                     description: "Deshabilita el botón",
+                },
+                {
+                    name: "ariaLabel",
+                    type: "string",
+                    description: "Etiqueta de texto descriptivo y accesible",
+                },
+                {
+                    name: "onClick",
+                    type: "function",
+                    description: "Accion a ejecutar",
                 },
             ]}
         />
