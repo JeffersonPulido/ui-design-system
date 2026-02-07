@@ -1,36 +1,136 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# UI Design System – Next.js
 
-## Getting Started
+Design System moderno construido con **Next.js (App Router)**, **TypeScript**, **Tailwind CSS** y **Testing con Jest + React Testing Library**.  
+Este proyecto centraliza componentes reutilizables, documentados y testeados, enfocados en escalabilidad, consistencia visual y buenas prácticas de frontend enterprise.
 
-First, run the development server:
+## Context
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Este proyecto corresponde a una prueba técnica elaborada por:
+
+**Jefferson Stiven Pulido Márquez**  
+**FullStack Developer**  
+**Grupo Bolívar – Davivienda**
+
+El objetivo es demostrar:
+
+- Diseño de componentes reutilizables
+- Arquitectura limpia y escalable
+- Buenas prácticas de testing
+- Documentación técnica clara
+
+## Tech Stack
+
+- **Next.js 14** (App Router)
+- **React 18**
+- **TypeScript**
+- **Tailwind CSS**
+- **Jest**
+- **React Testing Library**
+- **ESLint**
+- **Design Tokens**
+- **Internal UI Documentation**
+
+## Included Components
+
+### Button
+- Variants
+- States (hover, disabled, loading)
+- Custom colors
+
+### Card
+- Multiple sizes
+- Optional image
+- Dynamic actions
+- Accent color support
+
+### Input
+- Text, Number, Password
+- Textarea
+- Select
+- Validation states
+- Focus, error and disabled states
+
+Todos los componentes:
+
+- Son tipados
+- Son reutilizables
+- Tienen tests unitarios
+- Están documentados visualmente
+
+## Project Structure
+
+```txt
+ui-design-system
+├─ eslint.config.mjs
+├─ jest.config.ts
+├─ jest.setup.ts
+├─ next.config.ts
+├─ package.json
+├─ README.md
+├─ public
+├─ src
+│  ├─ app
+│  │  ├─ components        # Documentation components
+│  │  ├─ data              # Component docs definitions
+│  │  ├─ hooks
+│  │  ├─ interfaces
+│  │  ├─ providers
+│  │  ├─ layout.tsx
+│  │  └─ page.tsx
+│  └─ ui
+│     ├─ components        # Design System
+│     │  ├─ Button
+│     │  ├─ Card
+│     │  └─ Input
+│     ├─ theme
+│     │  └─ tokens.ts      # Design Tokens
+│     └─ index.ts
+├─ tailwind.config.js
+└─ tsconfig.json
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Para desplegar este proyecto:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+  Clonar o descargar repositorio
+```
+```bash
+  npm install
+```
+```bash
+  npm run dev
+```
+## Test Coverage
 
-## Learn More
+![Coverage Report](./public/coverage.png)
 
-To learn more about Next.js, take a look at the following resources:
+## Production
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+https://technicaljp.vercel.app/
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+##
 
-## Deploy on Vercel
+<h1 align="center">Hi 👋, I'm Jefferson Pulido</h1>
+<h3 align="center">Soy un Desarrollador Web Full Stack, con conocimiento en tecnologías como PHP, Python, bases de datos, NodeJS, JavaScript, ReactJs y mas. Siempre al día en los lenguajes más demandados. Soy responsable, autónomo, autodidacta y líder, lo que me permite buscar las mejores soluciones a cualquier problema. Me encanta aprender de diferentes áreas y estoy seguro de que puedo contribuir al éxito de su empresa. ¡Trabajemos juntos para hacer realidad nuestros sueños!</h3>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<p align="center"> <img
+        src="https://komarev.com/ghpvc/?username=jeffersonpulido&label=Profile%20views&color=dc3545&style=flat"
+        alt="jeffersonpulido" /> </p>
+<h2 align="center">👨‍💻 All my projects and more information is available in my portfolio! https://jeffersonpulido.netlify.app</h2>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+    <a href="https://linkedin.com/in/jeffersonpulido" target="blank"><img align="center"
+            src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg"
+            alt="jeffersonpulido" height="30" width="40" /></a>
+    <a href="https://github.com/JeffersonPulido" target="blank"><img align="center"
+            src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg"
+            alt="jeffersonpulido" height="30" width="40" /></a>
+</p>
+
+## Authors
+
+- [@JeffersonPulido](https://www.github.com/JeffersonPulido)
